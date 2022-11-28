@@ -17,6 +17,10 @@ webhook_avatar=''
 webhook_username='$server_name'
 webhook_footer='HyberHost Server Alerts'
 
+# Components
+login_alerts=true
+
+
 # This can be ignored - just used to add a prefix to all the commands
 cat <<'EOF'
 __   __  __   __  _______  _______  ______    __   __  _______  _______  _______ 
