@@ -22,7 +22,7 @@ Sponsor="$(jq '.server.name' /var/log/latest-speedtest.json)"
 # Send Webhook
 if [ speedtest_alerts ]; then
 client="${SSH_CLIENT%% *}"
-  /etc/stevescripts/discord.sh \
+  /scripts/hh-discord.sh \
   --webhook-url="$webhook_url" \
   --username "$webhook_username" \
   --avatar "$webhook_avatar" \
@@ -33,9 +33,9 @@ client="${SSH_CLIENT%% *}"
   --field "Latency;$Latency" \
   --field "Full Speedtest Result;$Full;false" \
   --field "Sponsor;$Sponsor;false" \
-  --author "@Steven#7194's Server Alerts" \
-  --author-url "https://github.com/IGSteven" \
-  --author-icon "https://avatars.githubusercontent.com/u/22038054" \
+  --author "HyberHost Server Alerts" \
+  --author-url "https://github.com/HyberHost/Server-Alerts-For-Discord" \
+  --author-icon "https://avatars.githubusercontent.com/u/118968750" \
   --footer "$webhook_footer"
 fi
 
