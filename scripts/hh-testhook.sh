@@ -12,7 +12,7 @@ client="${SSH_CLIENT%% *}"
   --description "Manual Test Alert!" \
   --title "Manual Test Alert!" \
   --field "Host;$server_name ($ip)" \
-  --author "@Steven#7194's Login Alerts" \
+  --author "@Steven#7194's Server Alerts" \
   --author-url "https://github.com/IGSteven" \
   --author-icon "https://avatars.githubusercontent.com/u/22038054" \
   --footer "$webhook_footer"
