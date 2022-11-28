@@ -5,14 +5,14 @@
 source /etc/hh-config.sh
 
 client="${SSH_CLIENT%% *}"
-  /etc/stevescripts/discord.sh \
+  /scripts/hh-discord.sh \
   --webhook-url="$webhook_url" \
   --username "$webhook_username" \
   --avatar "$webhook_avatar" \
   --description "Manual Test Alert!" \
   --title "Manual Test Alert!" \
-  --field "Host;$server_name ($ip)" \
-  --author "@Steven#7194's Server Alerts" \
-  --author-url "https://github.com/IGSteven" \
-  --author-icon "https://avatars.githubusercontent.com/u/22038054" \
+  --field "Host;$server_name ($server_ip)" \
+  --author "HyberHost Server Alerts" \
+  --author-url "https://github.com/HyberHost/Server-Alerts-For-Discord" \
+  --author-icon "https://avatars.githubusercontent.com/u/118968750" \
   --footer "$webhook_footer"
