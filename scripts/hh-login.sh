@@ -12,9 +12,8 @@ client="${SSH_CLIENT%% *}"
   --avatar "$webhook_avatar" \
   --description "SSH Login Alert!" \
   --title "New Login Alert!" \
-  --field "Host;$server_name ($ip)" \
-  --field "User;$(whoami)" \
-  --field "Client IP;$client" \
+  --field "Host;$server_name -  IP: $server_ip;false" \
+  --field "User;$(whoami) - IP: $client;false" \
   --author "HyberHost Server Alerts" \
   --author-url "https://github.com/HyberHost/Server-Alerts-For-Discord" \
   --author-icon "https://avatars.githubusercontent.com/u/118968750" \
