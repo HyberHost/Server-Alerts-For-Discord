@@ -17,7 +17,7 @@ Download="$(expr $(jq '.download.bytes' /var/log/latest-speedtest.json) / 100000
 Upload="$(expr $(jq '.upload.bytes' /var/log/latest-speedtest.json) / 1000000) MB/s"
 Latency="$(jq '.ping.latency' /var/log/latest-speedtest.json) ms"
 Full="$(jq --raw-output '.result.url' /var/log/latest-speedtest.json)"
-Sponsor="$(jq '.server.name' /var/log/latest-speedtest.json)"
+Sponsor="$(jq --raw-output '.server.name' /var/log/latest-speedtest.json)"
 
 # Send Webhook
 if [ speedtest_alerts ]; then
