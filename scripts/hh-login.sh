@@ -15,7 +15,7 @@ client="${SSH_CLIENT%% *}"
   --field "Host;$server_name ($ip)" \
   --field "User;$(whoami)" \
   --field "Client IP;$client" \
-  --author "@Steven#7194's Shell Script" \
+  --author "@Steven#7194's Server Alerts" \
   --author-url "https://github.com/IGSteven" \
   --author-icon "https://avatars.githubusercontent.com/u/22038054" \
   --footer "$webhook_footer"
