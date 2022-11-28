@@ -1,6 +1,3 @@
-# Fork of IGSteven's 
-(fork from private so not a actual fork)
-
 ## How to Setup
 
 ### Install Speedtest
