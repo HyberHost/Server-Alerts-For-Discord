@@ -12,7 +12,7 @@ We then need to run `speedtest` as we have to manually accept the TOS once in or
 ### Login Alerts
 We need to make a Symolic Link for this to work correctly
 ```
-ln /script/hh-login.sh /etc/profile.d/hh-login.sh
+ln /scripts/hh-login.sh /etc/profile.d/hh-login.sh
 ```
 
 ### Setup CronJobs
@@ -25,8 +25,8 @@ Create a cronjob **AS ROOT**
 We need to set the following so all user can run the files
 ```
 chmod 771 /etc/hh-config.sh
-chmod 771 /script/hh-login.sh
-chmod 771 /script/hh-discord.sh
+chmod 771 /scripts/hh-login.sh
+chmod 771 /scripts/hh-discord.sh
 ```
 
 
