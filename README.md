@@ -1,40 +1,43 @@
-## How to Setup
 
-### Install Speedtest
-```
-sudo apt-get install curl
-curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
-sudo apt-get install speedtest
-```
-We then need to run `speedtest` as we have to manually accept the TOS once in order for this to work.
+# Server Alerts for Discord
+
+This project is licensed under the [GNU General Public License v3.0](LICENSE). You are free to fork, modify, and contribute under the terms of this open-source license.
 
 
-### Login Alerts
-We need to make a Symolic Link for this to work correctly
-```
-ln /scripts/hh-login.sh /etc/profile.d/hh-login.sh
-```
-
-### Setup CronJobs
-Create a cronjob **AS ROOT**
-```
-20 16 * * 2,5 sh /scripts/hh-speedtest.sh
-```
-
-### Permissions
-We need to set the following so all user can run the files
-```
-chmod 771 /etc/hh-config.sh
-chmod 771 /scripts/hh-login.sh
-chmod 771 /scripts/hh-discord.sh
-```
-
+> **⚠️ WARNING: This script is unmaintained!**
+>
+> This repository is unmaintained. It was updated once after 3 years to remove our branding and simplify usage. No further updates or support will be provided.
+>
+> **Interested in maintaining this project?**
+> If you would like to take over maintenance (on a volunteer basis, as we no longer use this), please contact us!
 
 ---
-**Ubuntu Bug!**
-Ubuntu replaces /bin/bash with /bin/bash, we need to disable this 
 
-Run this command and select "NO"
+
+## Quick Install
+
+Run this one-liner to install and configure:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/HyberHost/Server-Alerts-For-Discord/main/install.sh | bash
+# or
+wget -qO- https://raw.githubusercontent.com/HyberHost/Server-Alerts-For-Discord/main/install.sh | bash
 ```
-sudo dpkg-reconfigure -plow dash
-```
+
+## How to Use `discord-alert.sh`
+
+1. **Set your Discord Webhook URL**
+	- Edit `discord-alert.sh` and set the `DISCORD_WEBHOOK_URL` variable to your Discord webhook.
+
+2. **Make the script executable**
+	- `chmod +x discord-alert.sh`
+
+3. **(Optional) Download `discord.sh` dependency**
+	- The script will attempt to download `discord.sh` automatically if not present.
+	- Or, manually download from: https://github.com/fieu/discord.sh
+
+4. **Run the script**
+	- `./discord-alert.sh`
+
+5. **Setup Symolic Link to automatically trigger the script on login**
+    - `ln /scripts/discord-alert.sh /etc/profile.d/discord-alert.sh`
